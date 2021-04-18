@@ -21,11 +21,11 @@ def input(message):
 def check(message):
     wts = message.text # word to search
     wts = str(wts)
-    rfile = open('urls.txt', 'r')
-    rows = set(rfile.readlines())
+    with open('urls.txt', 'r') as rfile:
+        lines = [line.rstrip() for line in rfile]
+    rows = set(lines)
     result = []
     for row in rows:
-        row = row.rstrip()
         if not row:
             pass
         else:
