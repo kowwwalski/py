@@ -23,7 +23,7 @@ def check(message):
     wts = str(wts)
     with open('urls.txt', 'r') as rfile:
         lines = [line.rstrip() for line in rfile]
-    rows = set(lines)
+    rows = list(set(lines))
     result = []
     for row in rows:
         if not row:
