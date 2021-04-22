@@ -61,7 +61,7 @@ for s in range(1, max(services)+1):
         if not service:
             pass
         else:
-            wb['Summary'][rcget] = str(svcget)
+            wb['Summary'][rcget] = str(svcget[0])
             wb['Summary'][rcgetnext] = sum(service)
 
 # changes content
